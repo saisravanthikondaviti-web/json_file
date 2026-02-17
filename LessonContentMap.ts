@@ -3368,140 +3368,596 @@ This example demonstrates a client sending a message to a server, and the server
     title: 'Introduction to SQL',
     image: 'https://media.geeksforgeeks.org/wp-content/uploads/20240501161048/SQL-Databases.png',
     sections: [
-      { type: 'title', content: 'Introduction to SQL' },
-      { type: 'text', content: 'SQL (Structured Query Language) is the standard language for managing and manipulating relational databases.' },
-      { type: 'subtitle', content: 'Key Features' },
-      { type: 'text', content: '• Data Querying\n• Data Manipulation\n• Data Definition\n• Data Control' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-      { type: 'subtitle', content: 'Why Learn SQL?' },
-      { type: 'text', content: 'Essential for data analysis, backend development, and working with databases.' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Introduction to SQL' 
+  },
+  { 
+    type: 'text', 
+    content: `SQL (Structured Query Language) is the standard language used to communicate with relational databases. It allows users to create, read, update, and delete data stored in tables, as well as define the structure of databases. SQL is widely used in backend development, data analysis, business intelligence, and web applications. By learning SQL, you gain the ability to work efficiently with large datasets, perform complex queries, and manage database systems such as MySQL, PostgreSQL, Oracle, and Microsoft SQL Server.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Key Features' 
+  },
+  { 
+    type: 'text', 
+    content: `• Data Querying – Retrieve specific information from one or more tables using the SELECT statement.  
+Example: SELECT name, age FROM Students WHERE age > 18;
+
+• Data Manipulation – Insert, update, or delete data in database tables using INSERT, UPDATE, and DELETE statements.  
+Example: INSERT INTO Students (name, age) VALUES ('John', 20);
+
+• Data Definition – Create or modify database structures using CREATE, ALTER, and DROP statements.  
+Example: CREATE TABLE Courses (id INT PRIMARY KEY, title VARCHAR(50));
+
+• Data Control – Manage access and permissions using GRANT and REVOKE statements, and ensure database security.  
+Example: GRANT SELECT, INSERT ON Students TO user1;` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Why Learn SQL?' 
+  },
+  { 
+    type: 'text', 
+    content: `SQL is essential for anyone working with data or databases. It allows you to efficiently query and manipulate data, generate reports, and integrate databases with applications. Backend developers use SQL to store and retrieve data for web and mobile applications. Data analysts and scientists rely on SQL to extract meaningful insights from datasets. Moreover, mastering SQL provides a strong foundation for learning advanced database technologies, data warehousing, and big data tools. Overall, SQL is a critical skill for careers in software development, data analytics, and database administration.` 
+  },
+],
+
   },
   'sql-database-design-2': {
     id: 'sql-database-design-2',
     title: 'Setting Up a SQL Environment',
     image: 'https://media.geeksforgeeks.org/wp-content/uploads/20240501161048/SQL-Databases.png',
     sections: [
-      { type: 'title', content: 'Setting Up a SQL Environment' },
-      { type: 'text', content: 'Install a relational database management system (RDBMS) to practice SQL.' },
-      { type: 'subtitle', content: 'Installation Steps' },
-      { type: 'text', content: '1. Choose an RDBMS (MySQL, PostgreSQL, SQLite)\n2. Download and install\n3. Set up a database\n4. Use a client tool (DBeaver, pgAdmin)' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-      { type: 'subtitle', content: 'First SQL Query' },
-      { type: 'text', content: 'SELECT * FROM table_name;' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Setting Up a SQL Environment' 
+  },
+  { 
+    type: 'text', 
+    content: `Before writing and practicing SQL queries, you need a relational database environment. An RDBMS (Relational Database Management System) allows you to store, organize, and manage data in tables. Popular RDBMS options include MySQL, PostgreSQL, SQLite, and Microsoft SQL Server. Setting up a proper environment helps you practice SQL queries, test database designs, and build real-world applications.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Installation Steps' 
+  },
+  { 
+    type: 'text', 
+    content: `1. Choose an RDBMS – Select the database system that fits your needs. MySQL and PostgreSQL are great for large applications, while SQLite is lightweight and ideal for learning.  
+2. Download and Install – Download the installer from the official website and follow the setup instructions for your operating system.  
+3. Set Up a Database – Once installed, create a new database where you can store your tables and data.  
+Example for MySQL:
+CREATE DATABASE School;
+
+4. Use a Client Tool – Tools like DBeaver, pgAdmin, or MySQL Workbench provide a graphical interface to write and run SQL queries efficiently.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'First SQL Query' 
+  },
+  { 
+    type: 'text', 
+    content: `After setting up your database, you can run your first SQL query to retrieve data from a table.
+
+Example:
+
+SELECT * FROM Students;
+
+Explanation:
+- SELECT – Specifies the columns you want to retrieve.
+- * – Means all columns.
+- FROM Students – Indicates the table from which to retrieve data.
+
+This query fetches all rows and columns from the 'Students' table. Running this query successfully confirms that your SQL environment is set up correctly.` 
+  },
+],
+
   },
   'sql-database-design-3': {
     id: 'sql-database-design-3',
     title: 'Basic SQL Commands',
     image: 'https://media.geeksforgeeks.org/wp-content/uploads/20240501161048/SQL-Databases.png',
     sections: [
-      { type: 'title', content: 'Basic SQL Commands' },
-      { type: 'text', content: 'Learn the fundamental SQL commands for querying and manipulating data.' },
-      { type: 'subtitle', content: 'Data Querying' },
-      { type: 'text', content: 'SELECT, WHERE, ORDER BY, GROUP BY' },
-      { type: 'subtitle', content: 'Data Manipulation' },
-      { type: 'text', content: 'INSERT, UPDATE, DELETE' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Basic SQL Commands' 
+  },
+  { 
+    type: 'text', 
+    content: `SQL (Structured Query Language) provides commands to interact with relational databases. These commands allow you to query data, insert new records, update existing records, and delete unwanted records. Understanding basic SQL commands is essential for anyone working with databases, whether you are a developer, data analyst, or data scientist. SQL commands are divided into categories such as Data Querying and Data Manipulation, and mastering these commands helps you efficiently retrieve and manage data.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Data Querying' 
+  },
+  { 
+    type: 'text', 
+    content: `Data querying commands are used to retrieve specific data from one or more tables. The most commonly used command is SELECT, often combined with WHERE, ORDER BY, and GROUP BY clauses.
+
+• SELECT – Retrieves data from a table.
+Example:
+SELECT name, age FROM Students;
+
+• WHERE – Filters records based on conditions.
+Example:
+SELECT name, age FROM Students WHERE age > 18;
+
+• ORDER BY – Sorts the results in ascending (ASC) or descending (DESC) order.
+Example:
+SELECT name, age FROM Students ORDER BY age DESC;
+
+• GROUP BY – Groups rows sharing a property, often used with aggregate functions like COUNT(), SUM(), AVG().
+Example:
+SELECT grade, COUNT(*) FROM Students GROUP BY grade;
+
+These commands allow you to extract meaningful information from large datasets.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Data Manipulation' 
+  },
+  { 
+    type: 'text', 
+    content: `Data manipulation commands are used to modify the contents of database tables. The primary commands are INSERT, UPDATE, and DELETE.
+
+• INSERT – Adds new records to a table.
+Example:
+INSERT INTO Students (name, age, grade) VALUES ('Alice', 20, 'A');
+
+• UPDATE – Modifies existing records in a table.
+Example:
+UPDATE Students SET grade = 'B' WHERE name = 'Alice';
+
+• DELETE – Removes records from a table.
+Example:
+DELETE FROM Students WHERE age < 18;
+
+Using these commands together, you can perform complete CRUD operations (Create, Read, Update, Delete) in your database. Mastering these commands is the foundation for more advanced SQL topics such as joins, subqueries, and transactions.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'sql-database-design-4': {
     id: 'sql-database-design-4',
     title: 'SQL Joins and Relationships',
     image: 'https://media.geeksforgeeks.org/wp-content/uploads/20240501161048/SQL-Databases.png',
     sections: [
-      { type: 'title', content: 'SQL Joins and Relationships' },
-      { type: 'text', content: 'Combine data from multiple tables using joins.' },
-      { type: 'subtitle', content: 'Types of Joins' },
-      { type: 'text', content: 'INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN' },
-      { type: 'subtitle', content: 'Use Cases' },
-      { type: 'text', content: 'Retrieve related data across tables efficiently.' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'SQL Joins and Relationships' 
+  },
+  { 
+    type: 'text', 
+    content: `In relational databases, data is often stored in multiple tables to maintain organization and reduce redundancy. SQL joins are used to combine rows from two or more tables based on a related column. By using joins, you can retrieve meaningful information that spans multiple tables, such as combining customer data with order history or linking products with suppliers. Understanding joins is essential for designing efficient queries and working with complex relational data.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Types of Joins' 
+  },
+  { 
+    type: 'text', 
+    content: `There are several types of joins in SQL:
+
+• INNER JOIN – Returns only the rows that have matching values in both tables.
+Example:
+SELECT Students.name, Courses.title
+FROM Students
+INNER JOIN Enrollments ON Students.id = Enrollments.student_id
+INNER JOIN Courses ON Enrollments.course_id = Courses.id;
+
+• LEFT JOIN (or LEFT OUTER JOIN) – Returns all rows from the left table, and matching rows from the right table. If no match, NULL is returned.
+Example:
+SELECT Students.name, Courses.title
+FROM Students
+LEFT JOIN Enrollments ON Students.id = Enrollments.student_id
+LEFT JOIN Courses ON Enrollments.course_id = Courses.id;
+
+• RIGHT JOIN (or RIGHT OUTER JOIN) – Returns all rows from the right table, and matching rows from the left table. If no match, NULL is returned.
+Example:
+SELECT Students.name, Courses.title
+FROM Students
+RIGHT JOIN Enrollments ON Students.id = Enrollments.student_id
+RIGHT JOIN Courses ON Enrollments.course_id = Courses.id;
+
+• FULL JOIN (or FULL OUTER JOIN) – Returns rows when there is a match in one of the tables. Combines LEFT and RIGHT JOIN results.
+Example:
+SELECT Students.name, Courses.title
+FROM Students
+FULL JOIN Enrollments ON Students.id = Enrollments.student_id
+FULL JOIN Courses ON Enrollments.course_id = Courses.id;` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Use Cases' 
+  },
+  { 
+    type: 'text', 
+    content: `Joins are used in scenarios where data is related but stored separately. Common use cases include:
+
+- Combining student information with course enrollments.
+- Linking customers with their orders in an e-commerce database.
+- Reporting inventory levels along with supplier details.
+- Generating comprehensive dashboards or analytics reports.
+
+By mastering joins, you can efficiently retrieve complex datasets without duplicating data in your database, ensuring consistency, accuracy, and better performance. Proper use of joins is key to relational database management and advanced SQL querying.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'sql-database-design-5': {
     id: 'sql-database-design-5',
     title: 'Advanced SQL Concepts',
     image: 'https://media.geeksforgeeks.org/wp-content/uploads/20240501161048/SQL-Databases.png',
     sections: [
-      { type: 'title', content: 'Advanced SQL Concepts' },
-      { type: 'text', content: 'Explore advanced SQL features for complex data manipulation and analysis.' },
-      { type: 'subtitle', content: 'Subqueries' },
-      { type: 'text', content: 'Queries within queries for complex data retrieval.' },
-      { type: 'subtitle', content: 'Indexes' },
-      { type: 'text', content: 'Improve query performance with indexing strategies.' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Advanced SQL Concepts' 
+  },
+  { 
+    type: 'text', 
+    content: `Once you are comfortable with basic SQL commands, you can explore advanced features that allow more complex data manipulation, analysis, and performance optimization. Advanced SQL concepts help in writing efficient queries, working with large datasets, and performing sophisticated operations that are essential in real-world applications.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Subqueries' 
+  },
+  { 
+    type: 'text', 
+    content: `A subquery is a query nested inside another query. Subqueries allow you to perform multi-step data retrieval in a single SQL statement. They can be used in SELECT, WHERE, and FROM clauses. Subqueries are useful for filtering data based on aggregate calculations, comparing values across tables, or dynamically generating results for the main query.
+
+Example – Find students with age greater than the average age:
+
+SELECT name, age 
+FROM Students 
+WHERE age > (SELECT AVG(age) FROM Students);
+
+Example – Get products that have the highest price in each category:
+
+SELECT product_name, category_id, price
+FROM Products
+WHERE price = (SELECT MAX(price) FROM Products WHERE Products.category_id = Products.category_id);` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Indexes' 
+  },
+  { 
+    type: 'text', 
+    content: `Indexes are database objects that improve the speed of data retrieval. By creating an index on one or more columns, the database can quickly locate rows without scanning the entire table. Indexes are particularly useful for large tables and columns frequently used in WHERE, JOIN, ORDER BY, or GROUP BY clauses. However, too many indexes can slow down INSERT, UPDATE, and DELETE operations, so it is important to use them strategically.
+
+Example – Create an index on the 'name' column of Students table:
+
+CREATE INDEX idx_name ON Students(name);
+
+Example – Create a composite index on 'category_id' and 'price' in Products table:
+
+CREATE INDEX idx_category_price ON Products(category_id, price);
+
+Using subqueries and indexes together allows you to write efficient, complex SQL queries that return results quickly, even for large datasets. Mastery of these advanced concepts is essential for database optimization, analytics, and high-performance application development.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'sql-database-design-6': {
     id: 'sql-database-design-6',
     title: 'Database Normalization',
     image: 'https://media.geeksforgeeks.org/wp-content/uploads/20240501161048/SQL-Databases.png',
     sections: [
-      { type: 'title', content: 'Database Normalization' },
-      { type: 'text', content: 'Organize database structure to reduce redundancy and improve data integrity.' },
-      { type: 'subtitle', content: 'Normalization Forms' },
-      { type: 'text', content: '1NF, 2NF, 3NF, BCNF' },
-      { type: 'subtitle', content: 'Benefits' },
-      { type: 'text', content: 'Eliminates data anomalies | Enhances consistency | Optimizes storage' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Database Normalization' 
+  },
+  { 
+    type: 'text', 
+    content: `Database normalization is the process of organizing data in a relational database to reduce redundancy and improve data integrity. By structuring tables properly, normalization ensures that each piece of information is stored only once, which minimizes the risk of inconsistencies, anomalies, and wasted storage space. It also makes database maintenance easier, improves query efficiency, and ensures that data can be reliably updated without introducing errors.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Normalization Forms' 
+  },
+  { 
+    type: 'text', 
+    content: `Normalization is usually performed in multiple stages called normal forms (NF). Each form addresses specific types of redundancy and anomalies:
+
+• First Normal Form (1NF) – Ensures that each column contains atomic values (no repeating groups) and each row is unique.
+Example: A table storing multiple phone numbers in one column violates 1NF. Instead, create separate rows for each phone number.
+
+• Second Normal Form (2NF) – Achieved when the table is in 1NF and all non-key attributes are fully dependent on the primary key.
+Example: In a table with StudentID, CourseID, StudentName, storing StudentName with every CourseID duplicates data. Separate into Student and Enrollment tables.
+
+• Third Normal Form (3NF) – Achieved when the table is in 2NF and no non-key attribute depends on another non-key attribute.
+Example: If storing StudentCity along with StudentZip, and Zip determines City, then City should be moved to a separate table.
+
+• Boyce-Codd Normal Form (BCNF) – A stricter version of 3NF, ensuring that every determinant is a candidate key. Helps handle certain edge cases where 3NF does not remove all redundancy.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Benefits' 
+  },
+  { 
+    type: 'text', 
+    content: `Normalization provides several advantages:
+
+- Eliminates data anomalies – Reduces issues like update, insert, or delete anomalies.  
+- Enhances consistency – Ensures the same piece of data is stored in only one place.  
+- Optimizes storage – Prevents duplicate data, saving disk space.  
+- Improves maintainability – Makes the database easier to update and manage.  
+- Facilitates better query performance – Well-structured tables make SQL queries more efficient.
+
+Overall, normalization is a fundamental principle in relational database design that ensures reliability, consistency, and efficiency, which are critical for any application dealing with structured data.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'sql-database-design-7': {
     id: 'sql-database-design-7',
     title: 'SQL Transactions and Concurrency',
     image: 'https://media.geeksforgeeks.org/wp-content/uploads/20240501161048/SQL-Databases.png',
     sections: [
-      { type: 'title', content: 'SQL Transactions and Concurrency' },
-      { type: 'text', content: 'Manage multiple operations as a single unit to ensure data integrity.' },
-      { type: 'subtitle', content: 'ACID Properties' },
-      { type: 'text', content: 'Atomicity, Consistency, Isolation, Durability' },
-      { type: 'subtitle', content: 'Concurrency Control' },
-      { type: 'text', content: 'Techniques to handle simultaneous data access by multiple users.' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'SQL Transactions and Concurrency' 
+  },
+  { 
+    type: 'text', 
+    content: `In SQL, a transaction is a sequence of one or more operations performed as a single, indivisible unit of work. Transactions ensure that either all operations succeed together, or none are applied, maintaining the integrity of the database. This is especially important in multi-user environments, where multiple users or applications may access and modify data simultaneously. Proper transaction management helps prevent inconsistencies, data loss, and errors caused by concurrent access.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'ACID Properties' 
+  },
+  { 
+    type: 'text', 
+    content: `Transactions in SQL adhere to the ACID properties to ensure reliability:
+
+• Atomicity – Ensures that all operations in a transaction are completed successfully or none at all.
+Example:
+BEGIN TRANSACTION;
+UPDATE Accounts SET balance = balance - 100 WHERE id = 1;
+UPDATE Accounts SET balance = balance + 100 WHERE id = 2;
+-- If any statement fails, rollback to maintain integrity
+COMMIT;
+
+• Consistency – Guarantees that a transaction transforms the database from one valid state to another, maintaining all predefined rules, constraints, and triggers.
+
+• Isolation – Ensures that concurrent transactions do not interfere with each other. Changes made by one transaction are not visible to others until committed.
+
+• Durability – Once a transaction is committed, its changes are permanent, even in case of system crashes or failures.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Concurrency Control' 
+  },
+  { 
+    type: 'text', 
+    content: `Concurrency control manages simultaneous data access by multiple users to prevent conflicts such as lost updates, dirty reads, or inconsistent data. Techniques include:
+
+- Locking – Prevents other transactions from modifying data until the current transaction is complete.
+Example: 
+SELECT * FROM Accounts WHERE id = 1 FOR UPDATE;
+
+- Isolation Levels – SQL provides different isolation levels (READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, SERIALIZABLE) to control how transactions interact.
+
+- Optimistic Concurrency – Assumes minimal conflicts and checks for data changes before committing.
+
+Using transactions and concurrency control together ensures that your database remains accurate, reliable, and consistent, even under high load or multiple simultaneous users. This is critical for banking systems, e-commerce applications, and any environment where data integrity is essential.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'sql-database-design-8': {
     id: 'sql-database-design-8',
     title: 'SQL Performance Optimization',
     image: 'https://media.geeksforgeeks.org/wp-content/uploads/20240501161048/SQL-Databases.png',
     sections: [
-      { type: 'title', content: 'SQL Performance Optimization' },
-      { type: 'text', content: 'Techniques to enhance the speed and efficiency of SQL queries.' },
-      { type: 'subtitle', content: 'Optimization Techniques' },
-      { type: 'text', content: 'Indexing, Query Refactoring, Analyzing Execution Plans' },
-      { type: 'subtitle', content: 'Monitoring Tools' },
-      { type: 'text', content: 'Use tools like EXPLAIN, SQL Profiler to identify bottlenecks.' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'SQL Performance Optimization' 
+  },
+  { 
+    type: 'text', 
+    content: `Optimizing SQL queries is essential for improving the speed, efficiency, and scalability of database applications. As datasets grow larger and queries become more complex, poorly written SQL can lead to slow response times, high resource usage, and degraded user experience. SQL performance optimization involves analyzing queries, restructuring them for efficiency, and leveraging database features that speed up data retrieval.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Optimization Techniques' 
+  },
+  { 
+    type: 'text', 
+    content: `Several techniques can significantly improve SQL performance:
+
+• Indexing – Indexes allow the database to locate rows faster without scanning the entire table. Choose appropriate columns for indexing, typically those used in WHERE, JOIN, ORDER BY, and GROUP BY clauses.
+Example:
+CREATE INDEX idx_student_name ON Students(name);
+
+• Query Refactoring – Simplify complex queries, remove unnecessary subqueries, and avoid SELECT * if only specific columns are needed.
+Example:
+-- Inefficient:
+SELECT * FROM Students WHERE age > 18 AND grade = 'A';
+-- Efficient:
+SELECT name, age FROM Students WHERE age > 18 AND grade = 'A';
+
+• Analyzing Execution Plans – Execution plans show how the database executes a query. By reviewing them, you can identify full table scans, missing indexes, or inefficient joins and adjust the query accordingly.
+
+• Avoiding redundant calculations – Precompute values or use derived columns when possible, rather than recalculating in every query.
+
+• Using proper joins – Choose INNER JOIN, LEFT JOIN, or EXISTS depending on the data requirement to reduce unnecessary row processing.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Monitoring Tools' 
+  },
+  { 
+    type: 'text', 
+    content: `Monitoring and analyzing query performance is crucial for continuous optimization. Tools and techniques include:
+
+• EXPLAIN / EXPLAIN PLAN – Shows the execution strategy of a query, helping identify bottlenecks and inefficient operations.
+Example:
+EXPLAIN SELECT name FROM Students WHERE age > 18;
+
+• SQL Profiler / Performance Monitor – Tools like SQL Server Profiler, MySQL Performance Schema, or PostgreSQL pg_stat_statements track query execution times and resource usage.
+
+• Query Logging – Enable logging to identify slow queries and frequent access patterns.
+
+By applying optimization techniques and monitoring query performance regularly, you can ensure that your SQL queries remain fast, efficient, and scalable, providing a better experience for users and reducing server load.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'sql-database-design-9': {
     id: 'sql-database-design-9',
     title: 'Backup and Recovery in SQL',
     image: 'https://media.geeksforgeeks.org/wp-content/uploads/20240501161048/SQL-Databases.png',
     sections: [
-      { type: 'title', content: 'Backup and Recovery in SQL' },
-      { type: 'text', content: 'Ensure data safety with proper backup and recovery strategies.' },
-      { type: 'subtitle', content: 'Backup Types' },
-      { type: 'text', content: 'Full, Incremental, Differential' },
-      { type: 'subtitle', content: 'Recovery Techniques' },
-      { type: 'text', content: 'Point-in-time recovery, Restore from backups' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Backup and Recovery in SQL' 
+  },
+  { 
+    type: 'text', 
+    content: `Data safety is critical in any database system. Backup and recovery strategies ensure that your data remains protected from hardware failures, software errors, accidental deletions, or malicious attacks. Regular backups and well-planned recovery processes allow databases to be restored to a consistent state, minimizing downtime and preventing data loss. Understanding different backup types and recovery techniques is essential for database administrators and developers.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Backup Types' 
+  },
+  { 
+    type: 'text', 
+    content: `SQL databases support several types of backups, each serving different purposes:
+
+• Full Backup – A complete copy of the entire database at a specific point in time. Provides a complete recovery but takes more storage and time.  
+Example:
+-- MySQL:
+BACKUP DATABASE School TO DISK = 'C:/backups/school_full.bak';
+
+• Incremental Backup – Captures only the changes made since the last backup (full or incremental). Saves storage and speeds up backup time but requires the previous backup chain for recovery.  
+Example:
+-- MySQL incremental backup can be done using binary logs.
+
+• Differential Backup – Captures changes made since the last full backup. It is a middle ground between full and incremental backups in terms of storage and recovery time.  
+Example:
+-- PostgreSQL:
+pg_dump -F c -f school_diff_backup.backup -Z 9 --data-only --table=Students` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Recovery Techniques' 
+  },
+  { 
+    type: 'text', 
+    content: `Recovery strategies are used to restore the database to a consistent state after data loss or corruption:
+
+• Point-in-Time Recovery – Restores the database to a specific moment, allowing you to recover data up to just before an error occurred. Useful for undoing accidental deletions.  
+Example:
+-- SQL Server:
+RESTORE DATABASE School FROM DISK = 'school_full.bak' WITH STOPAT = '2026-02-17 12:00:00';
+
+• Restore from Backups – Combines full, incremental, or differential backups to restore the database fully. Requires careful sequencing to ensure consistency.  
+Example:
+-- Restore full backup first, then apply incremental or differential backups as needed.
+
+By implementing regular backup schedules and testing recovery procedures, organizations can ensure business continuity, maintain data integrity, and reduce the impact of unforeseen disasters on their SQL databases.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'sql-database-design-10': {
     id: 'sql-database-design-10',
     title: 'Introduction to NoSQL Databases',
     image: 'https://media.geeksforgeeks.org/wp-content/uploads/20240501161048/SQL-Databases.png',
     sections: [
-      { type: 'title', content: 'Introduction to NoSQL Databases' },
-      { type: 'text', content: 'Explore non-relational databases designed for specific data models and scalability.' },
-      { type: 'subtitle', content: 'NoSQL Types' },
-      { type: 'text', content: 'Document, Key-Value, Column-Family, Graph' },
-      { type: 'subtitle', content: 'Use Cases' },
-      { type: 'text', content: 'Big Data, Real-time Web Apps, Content Management' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Introduction to NoSQL Databases' 
+  },
+  { 
+    type: 'text', 
+    content: `NoSQL databases are non-relational database systems designed to handle large volumes of data, provide high scalability, and support flexible data models. Unlike traditional relational databases that rely on tables and fixed schemas, NoSQL databases can store unstructured or semi-structured data, making them ideal for modern web applications, big data, and real-time analytics. They are designed to scale horizontally across multiple servers, allowing for better performance in distributed environments.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'NoSQL Types' 
+  },
+  { 
+    type: 'text', 
+    content: `NoSQL databases can be categorized based on their data model:
+
+• Document Databases – Store data as JSON or BSON documents, allowing nested structures. Examples include MongoDB and CouchDB.  
+Example:
+{
+  "name": "Alice",
+  "age": 25,
+  "courses": ["Math", "Physics"]
+}
+
+• Key-Value Databases – Store data as a key-value pair, ideal for caching and fast lookups. Examples include Redis and DynamoDB.  
+Example:
+"user:1001" => "{'name': 'Bob', 'age': 30}"
+
+• Column-Family Databases – Organize data into columns instead of rows for high-performance analytics. Examples include Apache Cassandra and HBase.  
+Example:
+RowKey: 101, Columns: {Name: 'Alice', Age: 25, Score: 90}
+
+• Graph Databases – Store data as nodes and edges to represent relationships. Examples include Neo4j and Amazon Neptune.  
+Example: Node: Person(Alice), Node: Person(Bob), Edge: FRIENDS_WITH(Alice → Bob)` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Use Cases' 
+  },
+  { 
+    type: 'text', 
+    content: `NoSQL databases are particularly useful in scenarios where relational databases may struggle:
+
+- Big Data Applications – Handle massive volumes of structured and unstructured data efficiently.  
+- Real-time Web Apps – Support fast reads and writes for applications like social media feeds, messaging, and gaming.  
+- Content Management Systems – Flexible schemas allow storage of varied content types without redesigning the database.
+
+By understanding NoSQL types and their use cases, developers can choose the appropriate database system to handle modern data requirements, providing flexibility, scalability, and performance for complex applications.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
 
   // ===== GIT VERSION CONTROL (10 lessons) =====
