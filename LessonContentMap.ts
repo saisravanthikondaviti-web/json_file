@@ -3966,140 +3966,636 @@ By understanding NoSQL types and their use cases, developers can choose the appr
     title: 'Introduction to Version Control',
     image: 'https://rock-the-prototype.com/wp-content/uploads/2024/10/Git-Versionskontrolle-fuer-moderne-Softwareentwicklung.jpg',
     sections: [
-      { type: 'title', content: 'Introduction to Version Control' },
-      { type: 'text', content: 'Version control systems help track changes to files over time, enabling collaboration and maintaining project history.' },
-      { type: 'subtitle', content: 'Key Benefits' },
-      { type: 'text', content: '• Track changes and history\n• Collaborate with teams\n• Revert to previous versions\n• Branching and merging' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-      { type: 'subtitle', content: 'Why Git?' },
-      { type: 'text', content: 'Git is the most widely used modern version control system, known for its speed, flexibility, and distributed architecture.' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Introduction to Version Control' 
+  },
+  { 
+    type: 'text', 
+    content: `Version control systems (VCS) are tools that help developers track and manage changes to code, documents, or other files over time. They record modifications, maintain a history of changes, and allow teams to collaborate without overwriting each other's work. By using version control, you can experiment safely, revert to previous versions if mistakes occur, and understand how a project has evolved. Version control is essential for software development, documentation projects, and any scenario where multiple contributors modify shared files.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Key Benefits' 
+  },
+  { 
+    type: 'text', 
+    content: `Version control provides several important benefits:
+
+• Track changes and history – Every modification is recorded, including who made the change and when. You can view past versions of files to understand project evolution.  
+• Collaborate with teams – Multiple contributors can work on the same project simultaneously without conflicts, merging their changes efficiently.  
+• Revert to previous versions – If a change introduces bugs or errors, you can quickly revert to an earlier stable version.  
+• Branching and merging – Developers can create separate branches to work on new features or experiments independently, then merge changes back into the main project once tested.
+
+Example workflow:
+1. Create a branch: git checkout -b new-feature  
+2. Make changes and commit: git commit -m "Add new feature"  
+3. Merge back into main branch: git checkout main; git merge new-feature` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Why Git?' 
+  },
+  { 
+    type: 'text', 
+    content: `Git is the most widely used modern version control system due to its speed, flexibility, and distributed architecture. Unlike centralized systems, Git allows every developer to have a full copy of the repository locally, enabling offline work and faster operations. It provides powerful branching and merging capabilities, supports collaborative workflows like pull requests, and integrates seamlessly with platforms like GitHub, GitLab, and Bitbucket. Mastering Git is essential for modern software development and team collaboration.` 
+  },
+],
+
   },
   'git-version-control-2': {
     id: 'git-version-control-2',
     title: 'Installing and Configuring Git',
     image: 'https://rock-the-prototype.com/wp-content/uploads/2024/10/Git-Versionskontrolle-fuer-moderne-Softwareentwicklung.jpg',
     sections: [
-      { type: 'title', content: 'Installing and Configuring Git' },
-      { type: 'text', content: 'Set up Git on your system and configure it for first-time use.' },
-      { type: 'subtitle', content: 'Installation Steps' },
-      { type: 'text', content: '1. Download from git-scm.com\n2. Run the installer\n3. Configure user identity\n4. Set up default editor' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-      { type: 'subtitle', content: 'Basic Configuration' },
-      { type: 'text', content: 'git config --global user.name "Your Name"\ngit config --global user.email "your@email.com"' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Installing and Configuring Git' 
+  },
+  { 
+    type: 'text', 
+    content: `Before using Git, you need to install it on your system and configure it for first-time use. Git works on Windows, macOS, and Linux, and proper configuration ensures that your commits are properly identified and that Git integrates well with your preferred code editor. Setting up Git correctly is the first step to managing version control efficiently.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Installation Steps' 
+  },
+  { 
+    type: 'text', 
+    content: `Follow these steps to install Git:
+
+1. Download Git – Visit the official website at git-scm.com and download the installer for your operating system.  
+2. Run the Installer – Follow the installation prompts. Choose default options unless you have specific requirements. On Windows, you can select the command-line interface integration and choose an editor like VS Code or Vim.  
+3. Configure User Identity – Git tracks who makes each commit. This requires setting your name and email.  
+4. Set Up Default Editor – Git allows you to choose a text editor for writing commit messages. You can select editors like VS Code, Nano, or Vim depending on your preference.
+
+Example for Windows installation:
+- Run "Git-2.x.x-64-bit.exe"  
+- Select “Use Git from the Windows Command Prompt”  
+- Choose “Use Vim” or another editor for commits  
+- Complete installation` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Basic Configuration' 
+  },
+  { 
+    type: 'text', 
+    content: `Once Git is installed, configure your global identity to ensure commits are properly attributed:
+
+Set your name:
+git config --global user.name "Your Name"
+
+Set your email:
+git config --global user.email "your@email.com"
+
+You can verify your configuration with:
+git config --list
+
+Additionally, you can set other options such as your default editor or line-ending preferences. Proper initial configuration ensures smooth workflow when creating repositories, committing changes, and collaborating with others.` 
+  },
+],
+
   },
   'git-version-control-3': {
     id: 'git-version-control-3',
     title: 'Basic Git Commands',
     image: 'https://rock-the-prototype.com/wp-content/uploads/2024/10/Git-Versionskontrolle-fuer-moderne-Softwareentwicklung.jpg',
     sections: [
-      { type: 'title', content: 'Basic Git Commands' },
-      { type: 'text', content: 'Learn the fundamental Git commands for daily version control operations.' },
-      { type: 'subtitle', content: 'Repository Management' },
-      { type: 'text', content: 'git init, git clone, git status, git add, git commit' },
-      { type: 'subtitle', content: 'Viewing Changes' },
-      { type: 'text', content: 'git diff, git log, git show' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Basic Git Commands' 
+  },
+  { 
+    type: 'text', 
+    content: `Git is a powerful version control system, and learning the basic commands is essential for managing projects efficiently. These commands allow you to create repositories, track changes, view history, and collaborate with others. Understanding the purpose and usage of each command ensures smooth workflow and helps prevent mistakes while working on code.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Repository Management' 
+  },
+  { 
+    type: 'text', 
+    content: `The following commands help you manage repositories and track changes:
+
+• git init – Initialize a new Git repository in your project folder.
+Example:
+git init
+
+• git clone – Copy an existing repository from a remote server like GitHub to your local machine.
+Example:
+git clone https://github.com/user/project.git
+
+• git status – Check the current state of your repository, including staged, unstaged, and untracked files.
+Example:
+git status
+
+• git add – Stage changes for commit. You can add specific files or all files at once.
+Example:
+git add file.txt
+git add .
+
+• git commit – Save staged changes to the repository with a descriptive message.
+Example:
+git commit -m "Add login feature"` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Viewing Changes' 
+  },
+  { 
+    type: 'text', 
+    content: `Git provides commands to inspect changes and history:
+
+• git diff – Show differences between files or commits. Useful to review modifications before committing.
+Example:
+git diff file.txt
+
+• git log – Display the commit history for the repository, showing commit IDs, authors, and messages.
+Example:
+git log --oneline
+
+• git show – Display details of a specific commit, including changes made and commit metadata.
+Example:
+git show abc123
+
+By mastering these basic commands, you can initialize repositories, track file changes, commit updates, and review project history effectively. These commands form the foundation for more advanced Git operations like branching, merging, and collaborating on remote repositories.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'git-version-control-4': {
     id: 'git-version-control-4',
     title: 'Branching and Merging',
     image: 'https://rock-the-prototype.com/wp-content/uploads/2024/10/Git-Versionskontrolle-fuer-moderne-Softwareentwicklung.jpg',
     sections: [
-      { type: 'title', content: 'Branching and Merging' },
-      { type: 'text', content: 'Create isolated lines of development and combine them using branching and merging strategies.' },
-      { type: 'subtitle', content: 'Branch Operations' },
-      { type: 'text', content: 'git branch, git checkout, git switch, git merge' },
-      { type: 'subtitle', content: 'Merge Strategies' },
-      { type: 'text', content: 'Fast-forward merge, Three-way merge, Recursive merge' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Branching and Merging' 
+  },
+  { 
+    type: 'text', 
+    content: `Branching and merging are core features of Git that allow developers to create isolated lines of development and later integrate changes into the main codebase. Branching helps manage features, bug fixes, or experiments without affecting the stable version. Merging combines these changes back into a main branch, ensuring that development is coordinated and project history is preserved. Understanding branching and merging is essential for collaborative workflows and large projects.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Branch Operations' 
+  },
+  { 
+    type: 'text', 
+    content: `Git provides several commands for managing branches:
+
+• git branch – List, create, or delete branches.
+Example:
+git branch          # Lists all branches
+git branch feature  # Creates a new branch called 'feature'
+
+• git checkout – Switch to a different branch or restore files.
+Example:
+git checkout feature
+
+• git switch – A newer command to switch branches more intuitively.
+Example:
+git switch feature
+
+• git merge – Merge changes from one branch into the current branch.
+Example:
+git merge feature   # Merges 'feature' branch into the current branch
+
+Branching allows multiple developers to work independently without interfering with the main codebase. You can have branches for new features, bug fixes, or experiments, then merge them when ready.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Merge Strategies' 
+  },
+  { 
+    type: 'text', 
+    content: `There are several strategies for merging branches:
+
+• Fast-Forward Merge – If the current branch has not diverged, Git simply moves the pointer forward.
+Example:
+git checkout main
+git merge feature  # If main hasn’t changed, pointer moves to feature branch
+
+• Three-Way Merge – Used when both branches have new commits. Git creates a new commit combining changes from both branches.
+
+• Recursive Merge – Default strategy for merging in Git; recursively merges all changes and resolves conflicts automatically when possible.
+
+During merges, conflicts may occur if the same lines of code were modified in both branches. Git marks the conflicts, and you must resolve them manually before committing the merge.
+
+By effectively using branching and merging, teams can work on multiple features simultaneously, manage releases, and maintain a clean and organized project history.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'git-version-control-5': {
     id: 'git-version-control-5',
     title: 'Remote Repositories',
     image: 'https://rock-the-prototype.com/wp-content/uploads/2024/10/Git-Versionskontrolle-fuer-moderne-Softwareentwicklung.jpg',
     sections: [
-      { type: 'title', content: 'Remote Repositories' },
-      { type: 'text', content: 'Collaborate with others by working with remote repositories on platforms like GitHub, GitLab, or Bitbucket.' },
-      { type: 'subtitle', content: 'Remote Operations' },
-      { type: 'text', content: 'git remote, git push, git pull, git fetch' },
-      { type: 'subtitle', content: 'Collaboration Workflow' },
-      { type: 'text', content: 'Forking, Pull Requests, Code Review' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Remote Repositories' 
+  },
+  { 
+    type: 'text', 
+    content: `Remote repositories are versions of your Git repositories hosted on platforms like GitHub, GitLab, or Bitbucket. They enable collaboration with other developers by providing a centralized location for sharing code, tracking changes, and managing contributions. Working with remote repositories is essential for team projects, open-source development, and backing up your work.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Remote Operations' 
+  },
+  { 
+    type: 'text', 
+    content: `Git provides commands to interact with remote repositories:
+
+• git remote – View or configure remote repositories. You can add, remove, or rename remotes.
+Example:
+git remote add origin https://github.com/user/project.git
+git remote -v  # List all remotes
+
+• git push – Upload local commits to a remote repository.
+Example:
+git push origin main  # Push local main branch to remote 'origin'
+
+• git pull – Fetch changes from a remote repository and merge them into your local branch.
+Example:
+git pull origin main
+
+• git fetch – Retrieve updates from the remote repository without merging. Useful for reviewing changes before integrating them.
+Example:
+git fetch origin
+
+Using these commands ensures that your local repository stays in sync with the remote repository and that changes can be shared with collaborators efficiently.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Collaboration Workflow' 
+  },
+  { 
+    type: 'text', 
+    content: `Collaboration with remote repositories follows common workflows that streamline team development:
+
+• Forking – Create a personal copy of a repository on a platform like GitHub to experiment safely without affecting the original project.
+
+• Pull Requests – Propose changes from your fork or branch to the main repository. Team members can review and discuss the changes before merging.
+
+• Code Review – A critical step where collaborators review each other's code for quality, consistency, and potential bugs. Feedback can be applied before merging.
+
+Example workflow:
+1. Fork the repository on GitHub
+2. Clone your fork locally: git clone <fork_url>
+3. Create a new branch: git checkout -b feature-branch
+4. Make changes, commit, and push: git commit -m "Add feature"; git push origin feature-branch
+5. Open a pull request on the original repository
+6. Team reviews, feedback is applied, then merge
+
+By following these remote operations and collaboration workflows, teams can work efficiently, prevent conflicts, and maintain high-quality code in shared projects.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'git-version-control-6': {
     id: 'git-version-control-6',
     title: 'Resolving Merge Conflicts',
     image: 'https://rock-the-prototype.com/wp-content/uploads/2024/10/Git-Versionskontrolle-fuer-moderne-Softwareentwicklung.jpg',
     sections: [
-      { type: 'title', content: 'Resolving Merge Conflicts' },
-      { type: 'text', content: 'Learn how to handle and resolve conflicts that occur when merging branches with conflicting changes.' },
-      { type: 'subtitle', content: 'Conflict Identification' },
-      { type: 'text', content: 'Git marks conflicts in files | Use git status to see conflicts | Conflict markers show competing changes' },
-      { type: 'subtitle', content: 'Resolution Steps' },
-      { type: 'text', content: '1. Identify conflicting files\n2. Edit files to resolve conflicts\n3. Mark as resolved with git add\n4. Complete the merge' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Resolving Merge Conflicts' 
+  },
+  { 
+    type: 'text', 
+    content: `Merge conflicts occur when Git cannot automatically reconcile differences between branches. This usually happens when the same line in a file has been modified differently in two branches or when files have been deleted and modified simultaneously. Learning to identify and resolve conflicts is essential to maintain a clean project history and avoid losing important changes.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Conflict Identification' 
+  },
+  { 
+    type: 'text', 
+    content: `Git provides clear indicators when conflicts occur:
+
+• Git marks conflicts directly in files using conflict markers:
+<<<<<<< HEAD
+Your changes in the current branch
+=======
+Changes from the branch being merged
+>>>>>>> feature-branch
+
+• Use git status to identify conflicting files:
+Example:
+git status
+# Unmerged paths:
+#   both modified: file.txt
+
+• Conflicts must be resolved manually before the merge can be completed. Git will not allow committing until all conflicts are addressed.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Resolution Steps' 
+  },
+  { 
+    type: 'text', 
+    content: `To resolve merge conflicts, follow these steps:
+
+1. Identify conflicting files using git status or reviewing conflict markers in files.  
+2. Open the files and manually edit them to keep the desired changes, removing the conflict markers.  
+3. Mark the conflicts as resolved by staging the files:
+git add file.txt
+
+4. Complete the merge by committing the resolution:
+git commit -m "Resolve merge conflict in file.txt"
+
+Tips for avoiding conflicts:
+- Communicate with your team about ongoing changes.
+- Pull and merge frequently to keep your branch updated.
+- Use smaller, focused commits and feature branches.
+
+By understanding how to identify and resolve merge conflicts, you can ensure that collaborative development proceeds smoothly, avoiding errors, lost work, and frustration. Merge conflict resolution is an essential skill for working effectively with Git in teams.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'git-version-control-7': {
     id: 'git-version-control-7',
     title: 'Git Stashing and Cleanup',
     image: 'https://rock-the-prototype.com/wp-content/uploads/2024/10/Git-Versionskontrolle-fuer-moderne-Softwareentwicklung.jpg',
     sections: [
-      { type: 'title', content: 'Git Stashing and Cleanup' },
-      { type: 'text', content: 'Temporarily save changes and clean up your working directory without committing.' },
-      { type: 'subtitle', content: 'Stash Operations' },
-      { type: 'text', content: 'git stash, git stash pop, git stash apply, git stash list' },
-      { type: 'subtitle', content: 'Cleanup Commands' },
-      { type: 'text', content: 'git clean, git reset, git revert' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Git Stashing and Cleanup' 
+  },
+  { 
+    type: 'text', 
+    content: `Git provides tools to temporarily save your uncommitted changes and clean up your working directory without losing work. Stashing is useful when you need to switch branches quickly or pull updates without committing incomplete work. Cleanup commands help maintain a tidy repository, remove unwanted files, or revert changes safely.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Stash Operations' 
+  },
+  { 
+    type: 'text', 
+    content: `Git stash allows you to temporarily shelve changes and return to a clean working directory:
+
+• git stash – Save your current changes to the stash stack and revert files to the last commit.
+Example:
+git stash
+
+• git stash list – View all stashed changes.
+Example:
+git stash list
+stash@{0}: WIP on main: 123abc Added login feature
+
+• git stash apply – Apply a stash without removing it from the stash list.
+Example:
+git stash apply stash@{0}
+
+• git stash pop – Apply the latest stash and remove it from the stash stack.
+Example:
+git stash pop
+
+Stashing is ideal when you need to quickly switch branches, pull updates, or handle emergencies without committing unfinished work.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Cleanup Commands' 
+  },
+  { 
+    type: 'text', 
+    content: `Cleanup commands help you manage your repository and remove unwanted changes:
+
+• git clean – Remove untracked files and directories.
+Example:
+git clean -f   # Remove untracked files
+git clean -fd  # Remove untracked files and directories
+
+• git reset – Undo changes in your working directory or staging area. Can be soft, mixed, or hard.
+Example:
+git reset --soft HEAD~1   # Undo last commit but keep changes staged
+git reset --hard HEAD     # Discard all uncommitted changes
+
+• git revert – Safely undo a committed change by creating a new commit that reverses the previous one.
+Example:
+git revert abc123   # Revert commit with ID abc123
+
+By using stashing and cleanup commands effectively, developers can maintain a clean working environment, switch tasks smoothly, and avoid accidental loss of code. These commands are essential for handling temporary work, removing clutter, and safely reverting changes in Git.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'git-version-control-8': {
     id: 'git-version-control-8',
     title: 'Git Hooks and Automation',
     image: 'https://rock-the-prototype.com/wp-content/uploads/2024/10/Git-Versionskontrolle-fuer-moderne-Softwareentwicklung.jpg',
     sections: [
-      { type: 'title', content: 'Git Hooks and Automation' },
-      { type: 'text', content: 'Automate tasks and enforce policies using Git hooks that trigger scripts at specific points in the Git workflow.' },
-      { type: 'subtitle', content: 'Common Hook Types' },
-      { type: 'text', content: 'pre-commit, pre-push, post-merge, pre-receive' },
-      { type: 'subtitle', content: 'Use Cases' },
-      { type: 'text', content: 'Code linting | Running tests | Enforcing commit messages | Auto-deployment' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Git Hooks and Automation' 
+  },
+  { 
+    type: 'text', 
+    content: `Git hooks are scripts that run automatically at specific points in the Git workflow. They allow developers to enforce policies, automate repetitive tasks, and integrate quality checks directly into the version control process. Hooks are stored in the `.git/hooks` directory of a repository and can be written in shell script, Python, or any executable language. By using hooks, teams can maintain code quality, enforce standards, and streamline development workflows without manual intervention.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Common Hook Types' 
+  },
+  { 
+    type: 'text', 
+    content: `Some commonly used Git hooks include:
+
+• pre-commit – Executes before a commit is finalized. Useful for running linters or checking code style to prevent committing problematic code.
+Example:
+#!/bin/sh
+npm run lint
+
+• pre-push – Runs before pushing changes to a remote repository. Can be used to run automated tests or validate commit messages.
+Example:
+#!/bin/sh
+npm test
+
+• post-merge – Executes after a successful merge. Can be used to rebuild project assets or notify team members.
+Example:
+#!/bin/sh
+echo "Merge complete. Run build script now."
+
+• pre-receive – A server-side hook that runs before accepting pushed commits. Useful for enforcing policies on a shared repository, like rejecting commits without proper formatting.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Use Cases' 
+  },
+  { 
+    type: 'text', 
+    content: `Git hooks enable automation and help maintain consistency across development teams:
+
+- Code linting – Automatically check code style and formatting before committing.
+- Running tests – Ensure that all tests pass before allowing code to be pushed.
+- Enforcing commit messages – Verify that commit messages follow a standard format for readability and project management.
+- Auto-deployment – Trigger deployment scripts or notifications after merges or successful pushes.
+
+By integrating hooks into your Git workflow, you can automate repetitive tasks, reduce human error, and enforce coding standards. Hooks are an essential tool for teams looking to improve efficiency, maintain quality, and streamline development processes.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'git-version-control-9': {
     id: 'git-version-control-9',
     title: 'Advanced Git Techniques',
     image: 'https://rock-the-prototype.com/wp-content/uploads/2024/10/Git-Versionskontrolle-fuer-moderne-Softwareentwicklung.jpg',
     sections: [
-      { type: 'title', content: 'Advanced Git Techniques' },
-      { type: 'text', content: 'Master advanced Git features for complex scenarios and efficient workflow management.' },
-      { type: 'subtitle', content: 'Advanced Operations' },
-      { type: 'text', content: 'git rebase, git cherry-pick, git bisect, git reflog' },
-      { type: 'subtitle', content: 'Workflow Strategies' },
-      { type: 'text', content: 'GitFlow, GitHub Flow, GitLab Flow, Trunk-based development' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Advanced Git Techniques' 
+  },
+  { 
+    type: 'text', 
+    content: `Once you are comfortable with basic Git commands, you can leverage advanced features to manage complex projects efficiently. Advanced Git techniques help in rewriting history, isolating changes, debugging issues, and implementing robust workflow strategies. These techniques are essential for professional development teams working on large-scale or collaborative projects.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Advanced Operations' 
+  },
+  { 
+    type: 'text', 
+    content: `Some key advanced Git operations include:
+
+• git rebase – Reapply commits from one branch onto another. Useful for keeping a clean, linear project history.
+Example:
+git checkout feature
+git rebase main
+
+• git cherry-pick – Apply a specific commit from one branch into another without merging the entire branch.
+Example:
+git cherry-pick abc123  # Applies commit abc123 to current branch
+
+• git bisect – Perform a binary search to find which commit introduced a bug.
+Example:
+git bisect start
+git bisect bad
+git bisect good <commit-id>
+# Git will help narrow down the faulty commit
+
+• git reflog – View all changes to the repository’s HEAD, including commits, resets, and rebases.
+Example:
+git reflog
+# Recover lost commits or find previous HEAD states
+
+These commands allow precise control over commits, history, and debugging, making complex workflows more manageable.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Workflow Strategies' 
+  },
+  { 
+    type: 'text', 
+    content: `Effective workflow strategies are critical for team collaboration:
+
+• GitFlow – A structured branching model with feature, develop, release, and hotfix branches. Ideal for projects with scheduled releases.
+
+• GitHub Flow – Simple workflow with main and feature branches; all changes are merged through pull requests. Suitable for continuous deployment.
+
+• GitLab Flow – Combines feature-driven development with environment-based branches. Supports CI/CD pipelines efficiently.
+
+• Trunk-based Development – Developers commit small, frequent updates directly to the main branch. Encourages continuous integration and fast feedback.
+
+By mastering these advanced operations and workflows, developers can handle complex development scenarios, resolve issues quickly, and maintain a clean, organized repository. Combining advanced commands like rebase and cherry-pick with strategic workflows ensures efficiency, clarity, and collaboration in professional software projects.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'git-version-control-10': {
     id: 'git-version-control-10',
     title: 'Git Best Practices and Team Workflow',
     image: 'https://rock-the-prototype.com/wp-content/uploads/2024/10/Git-Versionskontrolle-fuer-moderne-Softwareentwicklung.jpg',
     sections: [
-      { type: 'title', content: 'Git Best Practices and Team Workflow' },
-      { type: 'text', content: 'Establish effective team workflows and follow best practices for successful collaboration.' },
-      { type: 'subtitle', content: 'Best Practices' },
-      { type: 'text', content: '• Write descriptive commit messages\n• Keep commits small and focused\n• Review code before merging\n• Use feature branches' },
-      { type: 'subtitle', content: 'Team Collaboration' },
-      { type: 'text', content: 'Code reviews | CI/CD integration | Issue tracking | Documentation' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Git Best Practices and Team Workflow' 
+  },
+  { 
+    type: 'text', 
+    content: `Using Git effectively in a team setting requires following best practices and establishing consistent workflows. Proper habits help maintain a clean project history, reduce errors, and enable smooth collaboration among developers. Teams that adopt these standards can work efficiently, prevent conflicts, and produce high-quality code.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Best Practices' 
+  },
+  { 
+    type: 'text', 
+    content: `To ensure a clean and maintainable repository, follow these Git best practices:
+
+• Write descriptive commit messages – Use clear, concise messages that explain the purpose of each change.
+Example:
+git commit -m "Fix login validation bug on sign-in page"
+
+• Keep commits small and focused – Each commit should represent a single logical change. This makes reviewing and debugging easier.
+
+• Review code before merging – Use pull requests and code reviews to catch issues early, maintain quality, and share knowledge across the team.
+
+• Use feature branches – Isolate work on new features or bug fixes in separate branches, merging only when the code is complete and tested.
+Example workflow:
+git checkout -b feature/login-improvements
+# Make changes, commit, push, then open a pull request` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Team Collaboration' 
+  },
+  { 
+    type: 'text', 
+    content: `Effective collaboration goes beyond individual Git commands. Teams should integrate workflows and tools to enhance productivity:
+
+- Code reviews – Ensure changes meet quality standards and maintain consistency.
+- CI/CD integration – Automate testing, building, and deployment pipelines to catch errors early and release code reliably.
+- Issue tracking – Use tools like Jira, GitHub Issues, or GitLab Issues to manage tasks, bugs, and feature requests.
+- Documentation – Maintain README files, contribution guidelines, and code comments to help team members understand the project and onboarding newcomers.
+
+By combining Git best practices with structured team workflows, developers can work concurrently on multiple features, avoid conflicts, and maintain a robust and organized codebase. These strategies improve collaboration, minimize mistakes, and make the software development process more predictable and efficient.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
 
   // ===== DOCKER ESSENTIALS (10 lessons) =====
@@ -4108,28 +4604,107 @@ By understanding NoSQL types and their use cases, developers can choose the appr
     title: 'Introduction to Containerization',
     image: 'https://www.appsdeveloperblog.com/wp-content/uploads/2023/05/docker-tutorial-for-beginners.gif',
     sections: [
-      { type: 'title', content: 'Introduction to Containerization' },
-      { type: 'text', content: 'Containers package applications with their dependencies, ensuring consistent execution across different environments.' },
-      { type: 'subtitle', content: 'Container Benefits' },
-      { type: 'text', content: '• Environment consistency\n• Isolation and security\n• Resource efficiency\n• Rapid deployment' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-      { type: 'subtitle', content: 'Docker vs Virtual Machines' },
-      { type: 'text', content: 'Containers share the host OS kernel, making them lighter and faster than traditional VMs.' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Introduction to Containerization' 
+  },
+  { 
+    type: 'text', 
+    content: `Containerization is a method of packaging applications along with all their dependencies, libraries, and configuration files into a single unit called a container. This ensures that the application runs consistently across different environments, whether it’s a developer's local machine, a staging server, or a production system. Containers isolate the application from the host system, reducing conflicts and making deployment predictable and reliable.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Container Benefits' 
+  },
+  { 
+    type: 'text', 
+    content: `Containers provide several advantages for modern software development:
+
+• Environment consistency – Applications behave the same in development, testing, and production environments.  
+• Isolation and security – Each container runs independently, minimizing the impact of failures or security vulnerabilities.  
+• Resource efficiency – Containers are lightweight and share the host OS kernel, allowing multiple containers to run on the same system with minimal overhead.  
+• Rapid deployment – Containers can be started, stopped, or replicated quickly, supporting faster development cycles and scaling.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Docker vs Virtual Machines' 
+  },
+  { 
+    type: 'text', 
+    content: `Containers and virtual machines (VMs) both provide isolated environments, but they differ fundamentally in architecture:
+
+• Virtual Machines – Each VM includes a full operating system along with application code. This leads to higher resource usage and slower startup times.  
+• Docker Containers – Containers share the host OS kernel and only package the application and its dependencies. This makes them lightweight, fast to start, and more efficient for deploying multiple applications on the same host.
+
+Example: Running a web application in Docker ensures that all necessary libraries and runtime versions are included, so it will behave identically on any machine without requiring a full virtualized OS.
+
+Containerization has become a cornerstone of DevOps practices, microservices architecture, and cloud-native development, allowing teams to build, test, and deploy applications faster and more reliably.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'docker-essentials-2': {
     id: 'docker-essentials-2',
     title: 'Installing Docker',
     image: 'https://www.appsdeveloperblog.com/wp-content/uploads/2023/05/docker-tutorial-for-beginners.gif',
     sections: [
-      { type: 'title', content: 'Installing Docker' },
-      { type: 'text', content: 'Set up Docker on your development machine to start building and running containers.' },
-      { type: 'subtitle', content: 'Installation Methods' },
-      { type: 'text', content: '1. Docker Desktop (Windows/Mac)\n2. Native installation (Linux)\n3. Cloud providers\n4. Verify installation with docker --version' },
-      { type: 'image', content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' },
-      { type: 'subtitle', content: 'Post-Installation' },
-      { type: 'text', content: 'Test installation: docker run hello-world\nConfigure Docker to start on system boot' },
-    ],
+  { 
+    type: 'title', 
+    content: 'Installing Docker' 
+  },
+  { 
+    type: 'text', 
+    content: `Docker allows you to build, ship, and run applications in containers. Before you can start working with Docker, you need to install it on your development machine. Docker supports multiple platforms, including Windows, macOS, and Linux, with installation methods tailored for each. Proper installation ensures that Docker commands work seamlessly and that you can run containers locally.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Installation Methods' 
+  },
+  { 
+    type: 'text', 
+    content: `There are several ways to install Docker depending on your operating system:
+
+1. Docker Desktop (Windows/Mac) – Provides a user-friendly interface and integrates with system services. Download the installer from https://www.docker.com/products/docker-desktop and follow the installation instructions.  
+
+2. Native installation (Linux) – Use your package manager to install Docker Engine. For example, on Ubuntu:
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+3. Cloud providers – Platforms like AWS, Azure, and Google Cloud offer preconfigured Docker environments for development and deployment.
+
+4. Verify installation – After installation, run the following command to ensure Docker is installed correctly:
+docker --version
+You should see the installed Docker version printed on the console.` 
+  },
+  { 
+    type: 'subtitle', 
+    content: 'Post-Installation' 
+  },
+  { 
+    type: 'text', 
+    content: `After installing Docker, perform the following steps to confirm and configure your environment:
+
+• Test Docker by running a sample container:
+docker run hello-world
+This command downloads a small test image, runs it in a container, and prints a confirmation message.
+
+• Configure Docker to start automatically on system boot, ensuring that containers and services can run without manual startup.
+
+• Optionally, add your user to the Docker group (Linux) to avoid using sudo with every Docker command:
+sudo usermod -aG docker $USER
+
+By following these installation and post-installation steps, you ensure a stable Docker environment ready for containerized application development, testing, and deployment. Proper setup is the foundation for learning advanced Docker commands, managing images, and orchestrating multi-container applications.` 
+  },
+  { 
+    type: 'image', 
+    content: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=60' 
+  },
+],
+
   },
   'docker-essentials-3': {
     id: 'docker-essentials-3',
