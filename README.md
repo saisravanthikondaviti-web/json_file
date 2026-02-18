@@ -11,3 +11,18 @@
 10--->email-marketing completed
 11--->analytics metrics completed
 12--->brand stratergy completed
+13--->influencer-marketing
+14--->leadership-essentials
+15--->entrepreneurship-basics
+16--->uxui-design-1
+17--->figma-quick-start
+18--->color-typography
+19--->design-systems
+20--->adobe-creative-suite
+21--->prototyping-methods
+22--->design-thinking
+23--->data-science-basics
+24--->digital-marketing-basics
+25--->effective-communication
+26--->time-management
+27--->project-management
