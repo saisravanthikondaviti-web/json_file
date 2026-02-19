@@ -26,3 +26,11 @@
 25--->effective-communication
 26--->time-management
 27--->project-management
+28--->public-speaking
+29--->team-collaboration
+30--->conflict-resolution
+31--->strategic-thinking
+32--->pandas
+33--->data-visualization-tableau
+34--->sql-queries
+35--->data-cleaning
